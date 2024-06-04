@@ -65,7 +65,7 @@ function EventList() {
 
   useEffect(() => {
     fetchEventData();
-  }, []); // Empty dependency array to run only once when component mounts
+  }, []); // to render data directly when page reloads
 
   if (loading) {
     return (
