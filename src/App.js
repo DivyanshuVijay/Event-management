@@ -4,7 +4,7 @@ import AddEvent from "./components/AddEvent";
 import EventList from "./components/EventList";
 import UpdateEvent from "./components/UpdateEvent";
 
-import Layout from "./components/Layout"; // import the new Layout component
+import Layout from "./components/Layout"; 
 
 function App() {
   return (
