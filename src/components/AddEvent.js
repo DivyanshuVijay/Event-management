@@ -85,7 +85,7 @@ function AddEvent() {
             </span>
           </label>
           <input
-            type="number" // Adjust to "text" if including currency symbol
+            type="number" 
             name="startingPrice"
             id="startingPrice"
             class="form-control"
