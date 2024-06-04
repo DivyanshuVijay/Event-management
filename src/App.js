@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AddEvent from "./components/AddEvent";
+import EventList from "./components/EventList";
+import UpdateEvent from "./components/UpdateEvent";
+
+import Layout from "./components/Layout"; // import the new Layout component
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="add-event" element={<AddEvent />} />
+          <Route path="" element={<EventList />} />
+          <Route path="update-event/:eventId" element={<UpdateEvent />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
